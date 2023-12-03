@@ -7,9 +7,11 @@ public class Main {
         // Creating mood analyzer objects
         MoodAnalyzer analyzer1 = new MoodAnalyzer("I am in Sad Mood");
         MoodAnalyzer analyzer2 = new MoodAnalyzer("I am in Any Mood");
+        MoodAnalyzer analyzer3 = new MoodAnalyzer(null);
 
         // checking moods
         System.out.println("Mood is " + analyzer1.analyzeMood());
         System.out.println("Mood is " + analyzer2.analyzeMood());
+        System.out.println("Mood is " + analyzer3.analyzeMood());
     }
 }

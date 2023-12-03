@@ -11,10 +11,17 @@ public class MoodAnalyzer {
     }
 
     public String analyzeMood() {
-        if (this.message.contains("Sad")) {
-            return "SAD";
-        } else {
-            return "HAPPY";
+        try {
+            // UC2: handle null message
+            if (this.message == null) {
+                throw new NullPointerException("Invlid Mood: message is null");
+            } else if (message.contains("Sad")) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
+        } catch (NullPointerException exception) {
+            return "HAPPY"; // return happy if null
         }
     }
 }
